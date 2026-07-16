@@ -1,6 +1,12 @@
 body {
-  font-family: Arial;
+  font-family: "Inter" , "serif";
   margin: 40px;
+}
+
+h1 {
+  font-family: "Libre Baskerville", "serif";
+  font-size: 2.5rem;
+  margin-left: 10px;
 }
 
 #results { 
