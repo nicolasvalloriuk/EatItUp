@@ -7,12 +7,12 @@ root: {
   --secondary-color: #D99A2B;
   --text-color: #000000;
   /* Background colours*/
-  --primary-background: #F8F6F1;
-  --secondary-background: #FCFBF8;
+  --primary-bg-color: #F8F6F1;
+  --secondary-bg-color: #FCFBF8;
 }
 
 body {
-  background-color: var(--primary-background);
+  background-color: var(--primary-bg-color);
   color: var(--text-color);
   font-family: var(--primary-font);
   margin: 40px;
@@ -35,7 +35,7 @@ h1 {
   border: 1px solid #ccc;
   padding: 15px;
   border-radius: 8px;
-  background-color: var(--secondary-background);
+  background-color: var(--secondary-bg-color);
 }
 img { 
   width: 100%;
