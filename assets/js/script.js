@@ -102,9 +102,7 @@ async function loadWeeklyRecipe() {
   // Fill the layout
   document.getElementById("weekly-img").src = meal.strMealThumb;
   document.getElementById("weekly-title").textContent = meal.strMeal;
-  document.getElementById("weekly-description").textContent =
-    `${meal.strCategory} • ${meal.strArea}`;
-
+  
   document.getElementById("weekly-button").onclick = () => {
     window.open(`recipe.html?id=${meal.idMeal}`, "_blank");
   };

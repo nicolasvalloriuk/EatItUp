@@ -148,7 +148,9 @@ ul {
   max-width: 400px;
   border-radius: 8px;
 }
-
+.weekly-recipe-section {
+  padding: 40px;
+}
 
 /* Recipe page styles */
 .recipe-container {
@@ -172,3 +174,4 @@ ul {
 .recipe-container h2 {
   margin-top: 10px;
 }
+
