@@ -44,11 +44,14 @@
             </li>
           </ul>
           <!-- Search Bar -->
-          <form class="d-flex search-bar" role="search" >
-            <input class="form-control me-2" id="query" type="text" placeholder="Search" style="width: 250px;" aria-label="Search"/>
-            <div id="suggestions"></div>
+          <div class="search-wrapper">
+            <div class="search-container">
+              <input class="form-control me-2" id="query" type="text" placeholder="Search" style="width: 250px;" aria-label="Search"/>
+              <div id="suggestions"></div>  
+            </div>
+
             <button class="btn btn-outline-secondary my-custom-btn" onclick="searchRecipes()">Search</button>
-          </form>
+          </div>  
         </div>
       </div>
     </nav>
