@@ -103,6 +103,13 @@ async function searchRecipes(forcedQuery = null) {
 
     ${meal.strYoutube ? `<p><a href="${meal.strYoutube}" target="_blank">Watch on YouTube</a></p>` : ""}
    `;
+    
+    // Open recipe on a new page when the card is clicked
+    card.querySelectorAll(".recipe-link").forEach(el => {
+      el.addEventListener("click", () => {
+        window.open(`recipe.html?id=${meal.idMeal}`, "_blank");
+      });
+    });
 
     resultsDiv.appendChild(card);
   });
