@@ -132,22 +132,31 @@ h1 {
   margin-left: 40px;
 }
 
-#results { 
-  margin-top: 20px; 
-  display: grid; 
-  gap: 20px; 
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-}
-.card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: var(--secondary-bg-color);
-}
-img { 
-  width: 100%;
-  border-radius: 6px; 
-}
+
 ul { 
   padding-left: 20px; 
+}
+
+
+/* Recipe page styles */
+.recipe-container {
+  background-color: var(--primary-bg-color);
+  border-radius: 15px;
+}
+.recipe-row .instructions-row {
+  margin: 20px;
+  padding: 20px;
+}
+
+.recipe-container img {
+  max-width: 400px;
+  border-radius: 8px;
+  align-self: center;
+}
+.recipe-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.recipe-container h2 {
+  margin-top: 10px;
 }
