@@ -58,7 +58,10 @@ searchBtn.addEventListener("click", async () => {
   const res = await fetch(url);
   const data = await res.json();
 
-  if (!data.meals) return;
+  if (!data.meals) {
+    window.location.href = "404.html";
+    return;
+  }
 
   const firstMeal = data.meals[0];
   // Open recipe on a new page when the card is clicked
