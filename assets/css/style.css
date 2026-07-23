@@ -71,6 +71,24 @@ body {
   color: var(--secondary-color);
 }
 
+/* Autocomplete dropdown */
+#suggestions {
+  border: 1px solid #ccc;
+  max-width: 250px;
+  background: white;
+  position: absolute;
+  z-index: 10;
+  border-radius: 4px;
+  display: none;
+}
+#suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+#suggestions div:hover {
+  background: #eee;
+}
+
 main {
     margin: 20px;
 }
