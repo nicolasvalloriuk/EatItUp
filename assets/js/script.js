@@ -1,8 +1,9 @@
-// AUTOCOMPLETE FUNCTION inside the script.js file
+
 const queryInput = document.getElementById("query");
 const suggestionsDiv = document.getElementById("suggestions");
+const searchBtn = document.getElementById("searchBtn");
 
-// AUTOCOMPLETE FUNCTION
+// Search Function
 queryInput.addEventListener("input", async () => {
   const q = queryInput.value.trim();
 
@@ -31,6 +32,7 @@ queryInput.addEventListener("input", async () => {
     item.onclick = () => {
       queryInput.value = meal.strMeal;
       suggestionsDiv.style.display = "none";
+      searchRecipes(meal.strMeal);
     };
 
     suggestionsDiv.appendChild(item);
@@ -39,9 +41,20 @@ queryInput.addEventListener("input", async () => {
   suggestionsDiv.style.display = "block";
 });
 
-// MAIN SEARCH FUNCTION
-async function searchRecipes() {
-  const q = queryInput.value.trim();
+// Close the suggestions when clicking outside
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".search-container")) {
+    suggestionsDiv.style.display = "none";
+  }
+});
+
+// Search Button
+searchBtn.addEventListener("click", () => searchRecipes());
+
+// Main search fuction
+async function searchRecipes(forcedQuery = null) {
+
+  const q = forcedQuery || queryInput.value.trim();
   const resultsDiv = document.getElementById("results");
 
   if (!q) {
