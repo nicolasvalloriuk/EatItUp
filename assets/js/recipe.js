@@ -8,6 +8,7 @@ async function loadRecipe() {
   const meal = data.meals[0];
 
   let ingredients = "";
+  // For loop to get ingredients and measures
   for (let i = 1; i <= 20; i++) {
     const ing = meal[`strIngredient${i}`];
     const measure = meal[`strMeasure${i}`];

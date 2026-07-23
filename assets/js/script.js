@@ -1,12 +1,13 @@
-
+// Start creating constants variables for the search bar and suggestions
 const queryInput = document.getElementById("query");
 const suggestionsDiv = document.getElementById("suggestions");
 const searchBtn = document.getElementById("searchBtn");
 
 // Search Function
+// Add event listener to the input field to fetch suggestions as the user types
 queryInput.addEventListener("input", async () => {
   const q = queryInput.value.trim();
-
+  // if statement to check if the query is less than 2 characters, if so hide the suggestions
   if (q.length < 2) {
     suggestionsDiv.style.display = "none";
     return;
@@ -15,7 +16,7 @@ queryInput.addEventListener("input", async () => {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`;
   const res = await fetch(url);
   const data = await res.json();
-
+  // if statement to check if there are no meals returned, if so hide the suggestions
   if (!data.meals) {
     suggestionsDiv.style.display = "none";
     return;
@@ -64,8 +65,9 @@ searchBtn.addEventListener("click", async () => {
   window.open(`recipe.html?id=${firstMeal.idMeal}`, "_blank");
 });
 
+
 // Weekly recipe feature on index.html
-// Your curated list of weekly recipes (MealDB IDs)
+  // Your curated list of weekly recipes (MealDB IDs)
 const weeklyRecipes = [
   52772, // Beef and Mustard Pie
   52804, // Poutine
