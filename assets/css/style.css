@@ -24,12 +24,32 @@ body {
 .navbar-brand:hover{
   color: var(--secondary-color);
 }
+.logo-img{
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
 .logo {
   font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: bold;
   font-size: 2rem;
   margin-right: 40px
+}
+.search-bar {
+  margin-left: auto;
+  padding-right: 1rem;
+  align-items: center;
+}
+.my-custom-btn {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.my-custom-btn:hover {
+  background-color: #D99A2B;
+  color: var(--primary-bg-color);
+  border-color: #D99A2B;
 }
 
 .actived {
