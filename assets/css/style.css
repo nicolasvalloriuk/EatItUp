@@ -132,9 +132,21 @@ h1 {
   margin-left: 40px;
 }
 
-
 ul { 
   padding-left: 20px; 
+}
+
+/* Weekly Recipe section */
+#weekly-recipe {
+  background-color: var(--primary-bg-color);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+}
+#weekly-recipe img {
+  align-self: center;
+  max-width: 400px;
+  border-radius: 8px;
 }
 
 
