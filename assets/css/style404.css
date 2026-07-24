@@ -11,3 +11,8 @@ body {
   font-family: var(--secondary-font);
   font-size: 2rem;
 }
+.error-container {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+}
