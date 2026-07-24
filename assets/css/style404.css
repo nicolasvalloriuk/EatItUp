@@ -3,14 +3,17 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .error-message-sub {
   color: var(--secondary-color);
 }
+
 .error-line {
   color: var(--primary-color);
   font-family: var(--secondary-font);
   font-size: 2rem;
 }
+
 .error-container {
   display: flex;
   align-items: center;

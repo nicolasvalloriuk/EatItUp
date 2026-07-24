@@ -139,13 +139,12 @@ p {
   font-family: var(--primary-font);
   color: var(--text-color);
   font-size: 1.2rem;
-  
 }
+
 li {
   font-family: var(--primary-font);
   color: var(--text-color);
   font-size: 1.2rem;
-  
 }
 
 ul { 
@@ -194,4 +193,3 @@ ul {
 .recipe-container h2 {
   margin-top: 10px;
 }
-
