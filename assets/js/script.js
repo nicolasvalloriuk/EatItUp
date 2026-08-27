@@ -119,10 +119,3 @@ async function loadWeeklyRecipe() {
 
 // Load weekly recipe on page load
 loadWeeklyRecipe();
-
-// If statement to redirect to index.html after 5 seconds on 404.html
-if (window.location.pathname.includes("404.html")) {
-    setTimeout(function () {
-        window.location.href = "index.html";
-    }, 5000);
-}
