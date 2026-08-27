@@ -167,6 +167,16 @@ ul {
 .weekly-recipe-section {
   padding: 40px;
 }
+.weekly-title {
+  display: hidden;
+}
+/* Search div styles*/
+.search-wrapper {
+  background-color: var(--primary-bg-color);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px;
+}
 
 /* Recipe page styles */
 .recipe-container {
