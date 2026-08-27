@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 // Start creating constants variables for the search bar and suggestions
 const queryInput = document.getElementById("query");
 const suggestionsDiv = document.getElementById("suggestions");
@@ -7,7 +9,8 @@ const searchBtn = document.getElementById("searchBtn");
 // Add event listener to the input field to fetch suggestions as the user types
 queryInput.addEventListener("input", async function () {
   const q = queryInput.value.trim();
-  // if statement to check if the query is less than 2 characters, if so hide the suggestions
+  // if statement to check if the query is less than 2 characters,
+  // if so hide the suggestions
   if (q.length < 2) {
     suggestionsDiv.style.display = "none";
     return;
@@ -16,7 +19,8 @@ queryInput.addEventListener("input", async function () {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`;
   const res = await fetch(url);
   const data = await res.json();
-  // if statement to check if there are no meals returned, if so hide the suggestions
+  // if statement to check if there are no meals returned,
+  // if so hide the suggestions
   if (!data.meals) {
     suggestionsDiv.style.display = "none";
     return;
