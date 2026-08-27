@@ -5,7 +5,7 @@ const searchBtn = document.getElementById("searchBtn");
 
 // Search Function
 // Add event listener to the input field to fetch suggestions as the user types
-queryInput.addEventListener("input", async () => {
+queryInput.addEventListener("input", async function () {
   const q = queryInput.value.trim();
   // if statement to check if the query is less than 2 characters, if so hide the suggestions
   if (q.length < 2) {
