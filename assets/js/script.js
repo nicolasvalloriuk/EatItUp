@@ -15,8 +15,7 @@ queryInput.addEventListener("input", async function () {
         return;
     }
 
-    const url = `https://www.themealdb.com/api/json/v1/1/
-    search.php?s=${encodeURIComponent(q)}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`;
     const res = await fetch(url);
     const data = await res.json();
     // if statement to check if there are no meals returned,
@@ -60,8 +59,7 @@ searchBtn.addEventListener("click", async function () {
         return;
     }
 
-    const url = `https://www.themealdb.com/api/json/v1/1/
-    search.php?s=${encodeURIComponent(q)}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`;
     const res = await fetch(url);
     const data = await res.json();
 
@@ -105,8 +103,7 @@ async function loadWeeklyRecipe() {
     const week = getWeekNumber();
     const recipeId = weeklyRecipes[week % weeklyRecipes.length];
 
-    const url = `https://www.themealdb.com/api/json/v1/1/
-    lookup.php?i=${recipeId}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`;
     const res = await fetch(url);
     const data = await res.json();
 
