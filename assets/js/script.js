@@ -11,7 +11,7 @@ queryInput.addEventListener("input", async function () {
   if (q.length < 2) {
     suggestionsDiv.style.display = "none";
     return;
-  }
+  } 
 
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`;
   const res = await fetch(url);
