@@ -1,5 +1,4 @@
-/* eslint-env browser */
-
+/*jslint browser */
 // Start creating constants variables for the search bar and suggestions
 const queryInput = document.getElementById("query");
 const suggestionsDiv = document.getElementById("suggestions");
@@ -14,7 +13,7 @@ queryInput.addEventListener("input", async function () {
   if (q.length < 2) {
     suggestionsDiv.style.display = "none";
     return;
-  } 
+  }
 
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`;
   const res = await fetch(url);
@@ -30,12 +29,12 @@ queryInput.addEventListener("input", async function () {
   const firstFive = data.meals.slice(0, 5);
 
   suggestionsDiv.innerHTML = "";
-  firstFive.forEach(meal => {
+  firstFive.forEach(function(meal) {
     const item = document.createElement("div");
     item.textContent = meal.strMeal;
 
     // when clicked open recipe.html with the meal id
-    item.onclick = () => {
+    item.onclick = function () {
       suggestionsDiv.style.display = "none";
       window.open(`recipe.html?id=${meal.idMeal}`, "_blank");
     };
@@ -47,16 +46,18 @@ queryInput.addEventListener("input", async function () {
 });
 
 // Close the suggestions when clicking outside
-document.addEventListener("click", (e) => {
+document.addEventListener("click", function (e)  {
   if (!e.target.closest(".search-container")) {
     suggestionsDiv.style.display = "none";
   }
 });
 
 //Search button with event listener connected to new page
-searchBtn.addEventListener("click", async () => {
+searchBtn.addEventListener("click", async function ()  {
   const q = queryInput.value.trim();
-  if (!q) return;
+  if (!q) {
+    return;
+  }
 
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`;
   const res = await fetch(url);
@@ -111,8 +112,7 @@ async function loadWeeklyRecipe() {
   // Fill the layout
   document.getElementById("weekly-img").src = meal.strMealThumb;
   document.getElementById("weekly-title").textContent = meal.strMeal;
-  
-  document.getElementById("weekly-button").onclick = () => {
+  document.getElementById("weekly-button").onclick = function () {
     window.open(`recipe.html?id=${meal.idMeal}`, "_blank");
   };
 }
@@ -122,7 +122,7 @@ loadWeeklyRecipe();
 
 // If statement to redirect to index.html after 5 seconds on 404.html
 if (window.location.pathname.includes("404.html")) {
-  setTimeout(() => {
+  setTimeout(function() {
     window.location.href = "index.html";
   }, 5000);
 }
